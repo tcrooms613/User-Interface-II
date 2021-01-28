@@ -47,41 +47,42 @@ table {
 	border-spacing: 0;
 }
 /* End of Reset */
+
 /* Add CSS styling here */
-body {
+html {
     background: #181e29;
     color: antiquewhite;
     font-family: 'Cabin', sans-serif;
-    margin: 1%;
+    font-size: 62.50%;
 }
 header {
+  /* border: 1px solid pink; */
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     align-content: center;
-    margin: auto;
+    width: auto;
 }
  h1 {
+   /* border: 1px solid red; */
    display: flex;
-   flex-wrap: wrap;
-  font-size: 4rem;
+   align-items: center;
+   font-size: 5rem;
+   margin: 0 auto 0 1%;
 }
 
 nav {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    margin:auto;
+    justify-content: flex-end;
+    margin: 0 1% 0 auto;
     }
 
 nav a {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 3rem;
     color: antiquewhite;
-    margin: 5%;
+    margin: 0 4%;
 }
 nav a:hover {
   color: white;
@@ -90,11 +91,7 @@ nav a:hover {
 #intro-img {
   width: 100%;
   height:auto;
-  filter:none;
-  transition: filter 0.5s;
-}
-#intro-img:hover {
-  filter:blur(10px);
+  filter: grayscale(15%)
 }
 
 
@@ -102,7 +99,6 @@ nav a:hover {
 .intro-container {
   position: relative;
   text-align: center;
-  /* filter:blur(10px); */
 }
 
  .overlay {
@@ -113,28 +109,19 @@ nav a:hover {
   transform: translate(-50%, -50%);
 
 }
+
 .overlay h2 {
   height: 25%;
   display: flex;
   justify-content: center;
   font-size: 10rem;
-  visibility: hidden;
 }
+
 .overlay p {
   height: 25%;
   display: flex;
   justify-content: center;
   font-size: 2rem;
-  visibility: hidden;
-}
-
-.intro-container:hover .overlay h2 {
-    visibility: visible;
-    background: rgba(34, 28, 20, 0.479);
-}
-.intro-container:hover .overlay p {
-  visibility: visible;
-  background: rgba(34, 28, 20, 0.479);
 }
 
 button {
@@ -175,3 +162,23 @@ a:hover {
 
 }
 
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    margin: 0;
+  }
+  nav {
+    flex-direction: column;
+    align-content: center;
+    margin: 2%;
+  }
+  nav a {
+    border: 2px solid white;
+    /* margin: 0 10%; */
+    padding: 0 30rem;
+  }
+}
